@@ -49,9 +49,11 @@ let resumeCards = document.querySelectorAll(".resume .content .card");
 
 animationBtn.onclick = (_) => {
   if (animationBtn.checked) {
+    localStorage.setItem("animation" , "no-animation")
     body.classList.add("no-animation");
   } else {
     body.classList.remove("no-animation");
+    localStorage.setItem("animation" , "animation")
   }
 };
 // End Animation Page
@@ -60,6 +62,9 @@ window.onload = (_) => {
   // Start Animation
   infoBox.style.cssText = `transform: translateX(0%)`;
   nav.style.cssText = `transform: translateX(0%)`;
+  
+  // Set User Choses Settings
+  document.body.classList.add(localStorage.getItem("animation"));
 };
 
 window.onscroll = (_) => {
