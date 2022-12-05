@@ -32,9 +32,6 @@
   letter-spacing: 2px;
 }
 
-img {
-  image-rendering: -webkit-optimizespeed;
-}
 
 /* width */
 ::-webkit-scrollbar {

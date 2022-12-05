@@ -75,7 +75,7 @@ window.onscroll = (_) => {
   }
 
   // Start Animation
-  if (document.body.classList !== "no-animation") {
+  if (body.classList !== "no-animation") {
     resumeCards.forEach((el) => {
       if (window.scrollY >= el.offsetTop - 400) {
         el.style.cssText = `transform: translateX(0%)`;
