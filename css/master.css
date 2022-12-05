@@ -344,8 +344,6 @@ h2.title {
   color: var(--text-color);
   box-shadow: var(--box-shadow);
   overflow: hidden;
-  transform: translateX(var(--translate-));
-  transition: transform 1.5s;
 }
 
 .main-section .info-box::before {
@@ -452,8 +450,6 @@ h2.title {
 
 .main-section nav {
   width: 50%;
-  transform: translateX(var(--translate));
-  transition: transform 1.5s;
 }
 
 .main-section nav ul {
@@ -869,7 +865,7 @@ h2.title {
 }
 
 .portfolio .card:hover .info {
-  transition-delay: 15s;
+  transition-delay: 0.5s;
   transform: translateX(0%);
 }
 
@@ -885,16 +881,6 @@ h2.title {
 
 .portfolio .card a img {
   max-width: 100%;
-}
-
-.portfolio .card a:hover img {
-  animation: show-full-img 15s forwards;
-}
-
-@keyframes show-full-img {
-  100% {
-    transform: translateY(calc(-100% + 500px));
-  }
 }
 
 @media (max-width: 460px) {
