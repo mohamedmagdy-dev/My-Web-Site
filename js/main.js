@@ -1,4 +1,5 @@
 let body = document.body;
+
 // Start ToTop Button
 let toTopBtn = document.querySelector(".toTop");
 let resumeSection = document.querySelector(".resume");
@@ -43,29 +44,16 @@ let progressSkill = document.querySelectorAll(".prog span");
 
 // Start Animation Page
 let animationBtn = document.querySelector(".setting-box .controls input");
-let infoBox = document.querySelector(".main-section .info-box");
-let nav = document.querySelector(".main-section nav");
 let resumeCards = document.querySelectorAll(".resume .content .card");
 
 animationBtn.onclick = (_) => {
   if (animationBtn.checked) {
-    localStorage.setItem("animation" , "no-animation")
     body.classList.add("no-animation");
   } else {
     body.classList.remove("no-animation");
-    localStorage.setItem("animation" , "animation")
   }
 };
 // End Animation Page
-
-window.onload = (_) => {
-  // Start Animation
-  infoBox.style.cssText = `transform: translateX(0%)`;
-  nav.style.cssText = `transform: translateX(0%)`;
-  
-  // Set User Choses Settings
-  document.body.classList.add(localStorage.getItem("animation"));
-};
 
 window.onscroll = (_) => {
   // progress Skills
